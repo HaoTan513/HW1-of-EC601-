@@ -30,7 +30,7 @@ import cv2
 import sys
 
 if __name__ == '__main__':
-    print('This sample shows how to implement a simple hi resolution image navigation.')
+    print('This sample shows how to implement a simple hi resolution image navigation. And shows how to browse image')
     print('USAGE: browse.py [image filename]')
     print()
 
