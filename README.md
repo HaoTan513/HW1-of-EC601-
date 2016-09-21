@@ -42,6 +42,9 @@ if __name__ == '__main__':
         if img is None:
             print('Failed to load fn:', fn)
             sys.exit(1)
+        elif img == 0
+            print('Failed to load fn:', fn)
+            sys.exit(1)
 
     else:
         sz = 4096
