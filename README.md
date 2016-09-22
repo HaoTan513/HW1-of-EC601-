@@ -19,9 +19,11 @@ browse.py [image filename]
 from __future__ import print_function
 import sys
 PY3 = sys.version_info[0] == 3
+# Here the system files are imported.
 
 if PY3:
     xrange = range
+#The program starts only if the range matches.
 
 import numpy as np
 import cv2
@@ -33,6 +35,7 @@ if __name__ == '__main__':
     print('This sample shows how to implement a simple hi resolution image navigation. And shows how to browse image')
     print('USAGE: browse.py [image filename]')
     print()
+#heading lines
 
     if len(sys.argv) > 1:
         fn = sys.argv[1]
@@ -44,6 +47,7 @@ if __name__ == '__main__':
         elif img == 0:
             print('No image')
             sys.exit(1)
+#if the length of the image file is more than one.
 
     else:
         sz = 4096
@@ -52,7 +56,7 @@ if __name__ == '__main__':
         track = np.cumsum(np.random.rand(500000, 2)-0.5, axis=0)
         track = np.int32(track*10 + (sz/2, sz/2))
         cv2.polylines(img, [track], 0, 255, 1, cv2.LINE_AA)
-
+#to set the resolution of image
 
     small = img
     for i in xrange(3):
